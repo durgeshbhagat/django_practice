@@ -1,0 +1,13 @@
+<h1> There are {{count}} words typed by user </h1>
+
+<a href="{% url 'home' %}"> Start Again </a>
+<h2> Follwing are the things passsed by user :</h2>
+{{fulltext}}
+
+<h3> The word count in sorted order are: </h3>
+{% for word, count in wordcount_list %}
+{{word}} -  {{count}}
+<br/>
+{% endfor %}
+
+<a href="{% url 'home' %}"> Go to about us </a>
